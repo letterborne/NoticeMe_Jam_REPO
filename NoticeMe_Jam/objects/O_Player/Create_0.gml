@@ -5,3 +5,5 @@ walksp = 4;
 
 controller = 0;
 
+hascontrol = true;
+

@@ -8,7 +8,8 @@ if(place_meeting(x + hsp, y, O_Wall))
 		x = x + sign(hsp);
 	}
 	
-	hsp = 0;
+	hsp = walksp;
+	hsp = -hsp;
 }
 
 x = x + hsp;

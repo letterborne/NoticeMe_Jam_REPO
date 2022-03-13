@@ -1,14 +1,11 @@
 {
   "spriteId": {
-    "name": "S_Player",
-    "path": "sprites/S_Player/S_Player.yy",
+    "name": "S_Trigger",
+    "path": "sprites/S_Trigger/S_Trigger.yy",
   },
   "solid": false,
-  "visible": true,
-  "spriteMaskId": {
-    "name": "S_Player",
-    "path": "sprites/S_Player/S_Player.yy",
-  },
+  "visible": false,
+  "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,
@@ -24,8 +21,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"O_Player","path":"objects/O_Player/O_Player.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -34,7 +30,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "O_Player",
+  "name": "O_LevelTransition",
   "tags": [],
   "resourceType": "GMObject",
 }
