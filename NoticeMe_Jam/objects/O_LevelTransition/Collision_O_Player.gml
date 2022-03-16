@@ -2,10 +2,7 @@
 
 with(O_Player)
 {
-	if(hascontrol)
-	{
-		hascontrol = false;
-		SlideTransition(TRANS_MODE.GOTO, other.target);
-		
-	}
+	room_goto(target_room);
+	other.x = target_x;
+	other.y = target_y;
 }

@@ -7,7 +7,14 @@ if(hascontrol)
 {
 	key_left = keyboard_check(vk_left) or keyboard_check(ord("A"));
 	key_right = keyboard_check(vk_right) or keyboard_check(ord("D"));
+	key_up = keyboard_check(vk_up) or keyboard_check(ord("W"));
+	key_down = keyboard_check(vk_down) or keyboard_check(ord("S"));
+	
 	key_jump = keyboard_check_pressed(vk_space);
+	
+	//key_activate = keyboard_check_pressed(vk_space);
+	//key_attack = keyboard_check_pressed(vk_shift);
+	//key_item = keyboard_check_pressed(vk_control);
 
 	if(key_left) or (key_right) or (key_jump)
 	{
@@ -39,73 +46,45 @@ else
 #endregion
 
 
+
+inputDirection = point_direction(0, 0, key_right - key_left, key_down - key_up);
+inputMagnitude = (key_right - key_left != 0) or (key_down - key_up != 0);
+
 //calculate movement
-var move = key_right - key_left;
+hsp = lengthdir_x(inputMagnitude * walksp, inputDirection);
+vsp = lengthdir_y(inputMagnitude * walksp, inputDirection);
 
-hsp = move * walksp;
+//Collisions
 
-vsp = vsp + grv;
-
-if(place_meeting(x, y + 1, O_Wall)) && (key_jump)
+if place_meeting(x + hsp, y, O_Wall) == true
 {
-	vsp = -7;
-	
-}
-
-//horizontal collision
-if(place_meeting(x + hsp, y, O_Wall))
-{
-	while(!place_meeting(x + sign(hsp), y, O_Wall))
-	{
-		x = x + sign(hsp);
-	}
-	
 	hsp = 0;
 }
-
-x = x + hsp;
-
-
-//vertical collision
-if(place_meeting(x, y + vsp, O_Wall))
+if place_meeting(x, y + vsp, O_Wall) == true
 {
-	while(!place_meeting(x, y + sign(vsp), O_Wall))
-	{
-		y = y + sign(vsp);
-	}
-	
 	vsp = 0;
 }
 
-y = y + vsp;
+x += hsp;
+y += vsp;
 
 
+//Set sprite
 
-//Animation
-if(!place_meeting(x, y+1, O_Wall))
+if vsp == 0 
 {
-	//sprite_index = (Name of the jump sprite)
-	//image_speed = 0;
-	//if (sign(vsp) > 0) image_index = 1; else image_index = 0;
-	//
-	
-} 
-else 
-{
-	image_speed = 1;
-	if(hsp == 0) 
-	{
-		sprite_index = S_Player;
-		
-	}
-	else 
-	{
-		sprite_index = S_PlayerR;
-		
-	}
+	if hsp > 0 {face = RIGHT};
+	if hsp < 0 {face = LEFT};
 }
+if hsp > 0 && face == LEFT {face = RIGHT};
+if hsp < 0 && face == RIGHT {face = LEFT};
 
-if(hsp != 0)
+if hsp == 0
 {
-	image_xscale = sign(hsp);
+	if vsp > 0 {face = DOWN};
+	if vsp < 0 {face = UP};
 }
+if vsp > 0 && face == UP {face = DOWN};
+if vsp < 0 && face == DOWN {face = UP};
+
+sprite_index = sprite[face];
