@@ -12,7 +12,7 @@ if(hascontrol)
 	
 	key_jump = keyboard_check_pressed(vk_space);
 	
-	//key_activate = keyboard_check_pressed(vk_space);
+	key_activate = keyboard_check_pressed(vk_space);
 	//key_attack = keyboard_check_pressed(vk_shift);
 	//key_item = keyboard_check_pressed(vk_control);
 
@@ -47,12 +47,10 @@ else
 
 
 
-inputDirection = point_direction(0, 0, key_right - key_left, key_down - key_up);
-inputMagnitude = (key_right - key_left != 0) or (key_down - key_up != 0);
 
 //calculate movement
-hsp = lengthdir_x(inputMagnitude * walksp, inputDirection);
-vsp = lengthdir_y(inputMagnitude * walksp, inputDirection);
+hsp = (key_right - key_left) * walksp;
+vsp = (key_down - key_up) * walksp;
 
 //Collisions
 
@@ -88,3 +86,24 @@ if vsp > 0 && face == UP {face = DOWN};
 if vsp < 0 && face == DOWN {face = UP};
 
 sprite_index = sprite[face];
+
+
+if(key_activate) // I'm trying something, but it's probably a baaad idea cuz I dunno what I'm doing
+{
+	show_debug_message("Debugging");
+	var _activateX = lengthdir_x(10, direction);
+	var _activateY = lengthdir_y(10, direction);
+	activate = instance_position(x + _activateX, y + _activateY, P_Entity);
+	
+	if (activate == noone or activate.entityActivateScript == -1)
+	{
+		//do nothing?
+	}
+	else 
+	{
+		//Activate the entity 
+		ScriptExecuteArray(activate.entityActivateScript, activate.entityActivateArgs);
+	}
+}
+
+

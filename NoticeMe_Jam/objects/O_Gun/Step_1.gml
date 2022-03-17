@@ -23,11 +23,11 @@ firingdelay = firingdelay - 1;
 if((mouse_check_button(mb_left)) or  gamepad_button_check(0, gp_shoulderrb)) && (firingdelay < 0) 
 {
 	recoil = 4;
-	firingdelay = 5;
+	firingdelay = 10;
 	
 	with (instance_create_layer(x, y, "Bullets", O_Bullet))
 	{ 
-		speed = 25;
+		speed = 20;
 		direction = other.image_angle + random_range(-3, 3);
 		image_angle = direction;
 	}

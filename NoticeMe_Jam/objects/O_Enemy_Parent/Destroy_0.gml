@@ -1,0 +1,10 @@
+if(instance_exists(O_Spawner))
+{
+	with(O_Spawner)
+	{
+		if(triggered)
+		{
+			remaining[current_wave]--;
+		}
+	}
+}
