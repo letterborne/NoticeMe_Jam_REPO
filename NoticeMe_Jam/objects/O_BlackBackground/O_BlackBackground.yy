@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "S_BackyardNight",
-    "path": "sprites/S_BackyardNight/S_BackyardNight.yy",
+    "name": "S_veryBlack",
+    "path": "sprites/S_veryBlack/S_veryBlack.yy",
   },
   "solid": false,
   "visible": true,
@@ -28,7 +28,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "O_Background",
+  "name": "O_BlackBackground",
   "tags": [],
   "resourceType": "GMObject",
 }

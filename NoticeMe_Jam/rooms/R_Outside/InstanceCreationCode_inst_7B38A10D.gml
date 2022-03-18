@@ -4,20 +4,29 @@ waves = ds_list_create();
 
 for (var i = 0; i < 100; i += 1)
 {
-	ds_list_add(waves, [0, O_Blob, 0, 0 + (i * 50)]);
+	ds_list_add(waves, [0, O_Blob, 0, 0 + (i * 100)]);
+	ds_list_add(waves, [0, O_Skull, 0, 5 + (i * 100)]);
 	
-	ds_list_add(waves, [1, O_Skull, 1, 50 + (i * 50)]);
+	ds_list_add(waves, [1, O_Skull, 1, 50 + (i * 70)]);
+	ds_list_add(waves, [1, O_Blob, 1, 50 + (i * 70)]);
+	ds_list_add(waves, [1, O_Eyeball, 1, 50 + (i * 70)]);
 	
-	ds_list_add(waves, [2, O_Eyeball, 1, 100 + (i * 50)]);
+	ds_list_add(waves, [2, O_Eyeball, 1, 100 + (i * 60)]);
 	
-	ds_list_add(waves, [3, O_Eyeball, 1, 200 + (i * 50)]);
-	ds_list_add(waves, [3, O_Skull, 1, 200 + (i * 50)]);
-	ds_list_add(waves, [3, O_Blob, 1, 200 + (i * 50)]);
+	ds_list_add(waves, [3, O_Eyeball, 1, 500 + (i * 50)]);
+	ds_list_add(waves, [3, O_Skull, 1, 600 + (i * 50)]);
+	ds_list_add(waves, [3, O_Blob, 1, 700 + (i * 50)]);
+	
+	ds_list_add(waves, [3, O_Wasp, 1, 900 + (i * 40)]);
 	
 	
 		
 }
 
+spawn[0, 0] = 40;
+spawn[0, 1] = 90;
+spawn[1, 0] = 550;
+spawn[1, 1] = 90;
 
 
 
@@ -66,8 +75,4 @@ for (var i = 0; i < 100; i += 1)
 //ds_list_add(waves, [2, O_Enemy_Parent, 1, 1550]);
 
 
-spawn[0, 0] = 30;
-spawn[0, 1] = 90;
-spawn[1, 0] = 585;
-spawn[1, 1] = 90;
 

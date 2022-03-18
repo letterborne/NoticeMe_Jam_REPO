@@ -1,32 +1,46 @@
-vsp = vsp;
+//vsp = vsp;
 
-//horizontal collision
-if(place_meeting(x + hsp, y, O_Wall))
+if place_meeting(x + hsp, y, O_Wall) == true
 {
-	while(!place_meeting(x + sign(hsp), y, O_Wall))
-	{
-		x = x + sign(hsp);
-	}
-	
 	hsp = walksp;
 	hsp = -hsp;
 }
-
-x = x + hsp;
-
-
-//vertical collision
-if(place_meeting(x, y + vsp, O_Wall))
+if place_meeting(x, y + vsp, O_Wall) == true
 {
-	while(!place_meeting(x, y + sign(vsp), O_Wall))
-	{
-		y = y + sign(vsp);
-	}
-	
-	vsp = 0;
+	vsp = -vsp;
 }
 
-y = y + vsp;
+x += hsp;
+y += vsp;
+
+
+////horizontal collision
+//if(place_meeting(x + hsp, y, O_Wall))
+//{
+//	while(!place_meeting(x + sign(hsp), y, O_Wall))
+//	{
+//		x = x + sign(hsp);
+//	}
+	
+//	hsp = walksp;
+//	hsp = -hsp;
+//}
+
+//x+=hsp;
+
+
+////vertical collision
+//if(place_meeting(x, y + vsp, O_Wall))
+//{
+//	while(!place_meeting(x, y + sign(vsp), O_Wall))
+//	{
+//		y = y + sign(vsp);
+//	}
+	
+//	vsp = 0;
+//}
+
+//y = y + vsp;
 
 
 

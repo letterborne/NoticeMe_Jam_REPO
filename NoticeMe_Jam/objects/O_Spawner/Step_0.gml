@@ -7,7 +7,7 @@ if(triggered)
 		if(next[_WAVE] == current_wave) && (next[_DELAY] == timer)
 		{
 			var spawnpoint = next[_SPAWN];
-			instance_create_layer(spawn[spawnpoint, 0] + random(10), spawn[spawnpoint, 1] + random(200), "Enemy", next[_TYPE]);
+			instance_create_layer(spawn[spawnpoint, 0] + random(10), spawn[spawnpoint, 1] + random(230), "Enemy", next[_TYPE]);
 			//instance_create_layer(spawn_pos_x, spawn_pos_y, "Enemy", next[_TYPE]);
 		}
 	}

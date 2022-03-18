@@ -1,13 +1,16 @@
 {
   "spriteId": {
-    "name": "S_BackyardNight",
-    "path": "sprites/S_BackyardNight/S_BackyardNight.yy",
+    "name": "S_Wasp",
+    "path": "sprites/S_Wasp/S_Wasp.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "O_Enemy_Parent",
+    "path": "objects/O_Enemy_Parent/O_Enemy_Parent.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -28,7 +31,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "O_Background",
+  "name": "O_Wasp",
   "tags": [],
   "resourceType": "GMObject",
 }
