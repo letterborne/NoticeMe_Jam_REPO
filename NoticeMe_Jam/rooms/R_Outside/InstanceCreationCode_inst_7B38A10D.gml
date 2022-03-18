@@ -1,20 +1,73 @@
 //wave, type, spawnpoint, delay
 
 waves = ds_list_create();
-ds_list_add(waves, [0, O_Blob, 0, 0]);
-ds_list_add(waves, [0, O_Blob, 1, 50]);
-ds_list_add(waves, [0, O_Blob, 0, 100]);
 
-ds_list_add(waves, [1, O_Skull, 0, 150]);
-ds_list_add(waves, [1, O_Skull, 0, 200]);
-ds_list_add(waves, [1, O_Skull, 0, 250]);
+for (var i = 0; i < 100; i += 1)
+{
+	ds_list_add(waves, [0, O_Blob, 0, 0 + (i * 50)]);
+	
+	ds_list_add(waves, [1, O_Skull, 1, 50 + (i * 50)]);
+	
+	ds_list_add(waves, [2, O_Eyeball, 1, 100 + (i * 50)]);
+	
+	ds_list_add(waves, [3, O_Eyeball, 1, 200 + (i * 50)]);
+	ds_list_add(waves, [3, O_Skull, 1, 200 + (i * 50)]);
+	ds_list_add(waves, [3, O_Blob, 1, 200 + (i * 50)]);
+	
+	
+		
+}
 
-ds_list_add(waves, [2, O_Enemy_Parent, 1, 300]);
-ds_list_add(waves, [2, O_Enemy_Parent, 1, 350]);
-ds_list_add(waves, [2, O_Enemy_Parent, 1, 400]);
 
-spawn[0, 0] = 100;
-spawn[0, 1] = 200;
-spawn[1, 0] = 300;
-spawn[1, 1] = 200;
+
+
+
+//ds_list_add(waves, [0, O_Blob, 0, 0]);
+//ds_list_add(waves, [0, O_Blob, 0, 50]);
+//ds_list_add(waves, [0, O_Blob, 0, 100]);
+//ds_list_add(waves, [0, O_Blob, 0, 150]);
+//ds_list_add(waves, [0, O_Blob, 0, 200]);
+//ds_list_add(waves, [0, O_Blob, 0, 250]);
+//ds_list_add(waves, [0, O_Blob, 0, 300]);
+//ds_list_add(waves, [0, O_Blob, 0, 350]);
+//ds_list_add(waves, [0, O_Blob, 0, 400]);
+//ds_list_add(waves, [0, O_Blob, 0, 450]);
+//ds_list_add(waves, [0, O_Blob, 0, 500]);
+
+//ds_list_add(waves, [1, O_Skull, 1, 350]);
+//ds_list_add(waves, [1, O_Skull, 1, 400]);
+//ds_list_add(waves, [1, O_Skull, 1, 450]);
+//ds_list_add(waves, [1, O_Skull, 0, 500]);
+//ds_list_add(waves, [1, O_Skull, 1, 550]);
+//ds_list_add(waves, [1, O_Skull, 1, 600]);
+//ds_list_add(waves, [1, O_Skull, 0, 650]);
+//ds_list_add(waves, [1, O_Skull, 1, 700]);
+//ds_list_add(waves, [1, O_Skull, 1, 750]);
+//ds_list_add(waves, [1, O_Skull, 0, 800]);
+//ds_list_add(waves, [1, O_Skull, 1, 850]);
+//ds_list_add(waves, [1, O_Skull, 1, 950]);
+//ds_list_add(waves, [1, O_Skull, 0, 950]);
+//ds_list_add(waves, [1, O_Skull, 1, 1050]);
+//ds_list_add(waves, [1, O_Skull, 1, 1150]);
+//ds_list_add(waves, [1, O_Skull, 1, 1250]);
+
+//ds_list_add(waves, [2, O_Enemy_Parent, 0, 1000]);
+//ds_list_add(waves, [2, O_Enemy_Parent, 1, 1050]);
+//ds_list_add(waves, [2, O_Enemy_Parent, 1, 1100]);
+//ds_list_add(waves, [2, O_Enemy_Parent, 1, 1150]);
+//ds_list_add(waves, [2, O_Enemy_Parent, 0, 1200]);
+//ds_list_add(waves, [2, O_Enemy_Parent, 0, 1250]);
+//ds_list_add(waves, [2, O_Enemy_Parent, 1, 1300]);
+//ds_list_add(waves, [2, O_Enemy_Parent, 1, 1350]);
+//ds_list_add(waves, [2, O_Enemy_Parent, 0, 1400]);
+//ds_list_add(waves, [2, O_Enemy_Parent, 0, 1450]);
+//ds_list_add(waves, [2, O_Enemy_Parent, 1, 1550]);
+//ds_list_add(waves, [2, O_Enemy_Parent, 1, 1550]);
+//ds_list_add(waves, [2, O_Enemy_Parent, 1, 1550]);
+
+
+spawn[0, 0] = 30;
+spawn[0, 1] = 90;
+spawn[1, 0] = 585;
+spawn[1, 1] = 90;
 

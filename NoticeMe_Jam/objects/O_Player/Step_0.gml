@@ -111,4 +111,6 @@ if(key_activate) // I'm trying something, but it's probably a baaad idea cuz I d
 	}
 }
 
+//Constantly decrement hit timer
+hitTimer--;
 

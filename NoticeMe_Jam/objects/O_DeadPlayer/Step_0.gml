@@ -4,12 +4,19 @@ if(done == 0)
 	//vsp = vsp + grv;
 	
 	
+	
 	timer--;
 	
 	if(timer < 0)
 	{
+		game_set_speed(60, gamespeed_fps);
+
+
+		show_debug_message("Player time is up");
 		instance_destroy();
-		show_debug_message("Time is up");
+		
+		game_restart();
+		
 	}
 
 
@@ -35,6 +42,7 @@ if(done == 0)
 		{
 			done = 1;
 			image_index = 1;
+			
 		}
 		while(!place_meeting(x, y + sign(vsp), O_Wall))
 		{

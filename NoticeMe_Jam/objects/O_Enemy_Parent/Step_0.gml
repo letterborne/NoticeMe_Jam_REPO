@@ -42,16 +42,16 @@ if(!place_meeting(x, y+1, O_Wall))
 else 
 {
 	image_speed = 1;
-	if(hsp == 0) 
-	{
-		sprite_index = enemyRunSprite; //use an enemy idle here later
+	//if(hsp == 0) 
+	//{
+	//	sprite_index = S_EnemyR; //use an enemy idle here later
 		
-	}
-	else 
-	{
-		sprite_index = enemyRunSprite;
+	//}
+	//else 
+	//{
+	//	sprite_index = S_EnemyR;
 		
-	}
+	//}
 }
 
 if(hsp != 0)

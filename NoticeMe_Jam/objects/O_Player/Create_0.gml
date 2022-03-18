@@ -1,5 +1,7 @@
 hsp = 0;
 vsp = 0;
+flash = 0;
+
 //grv = 0.3;
 walksp = 1;
 
@@ -22,6 +24,7 @@ hitByAttack = -1;
 //Health
 
 hp = 5;
+hitTimer = 0;
 
 
 //Score
