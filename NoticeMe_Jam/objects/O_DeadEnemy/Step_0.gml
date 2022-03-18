@@ -2,6 +2,15 @@ if(done == 0)
 {
 	
 	vsp = vsp + grv;
+	
+	
+	timer--;
+	
+	if(timer < 0)
+	{
+		instance_destroy();
+		show_debug_message("Time is up");
+	}
 
 
 

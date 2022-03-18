@@ -77,13 +77,18 @@ if vsp == 0
 if hsp > 0 && face == LEFT {face = RIGHT};
 if hsp < 0 && face == RIGHT {face = LEFT};
 
-if hsp == 0
+if hsp == 0 && vsp == 0
 {
-	if vsp > 0 {face = DOWN};
-	if vsp < 0 {face = UP};
+	image_speed = 0;
+	//if vsp > 0 {face = DOWN};
+	//if vsp < 0 {face = UP};
+} 
+else 
+{
+	image_speed = 1;
 }
-if vsp > 0 && face == UP {face = DOWN};
-if vsp < 0 && face == DOWN {face = UP};
+//if vsp > 0 && face == UP {face = DOWN};
+//if vsp < 0 && face == DOWN {face = UP};
 
 sprite_index = sprite[face];
 

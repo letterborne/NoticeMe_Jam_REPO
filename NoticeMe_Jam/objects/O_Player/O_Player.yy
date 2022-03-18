@@ -1,13 +1,13 @@
 {
   "spriteId": {
-    "name": "S_Player_down",
-    "path": "sprites/S_Player_down/S_Player_down.yy",
+    "name": "S_Player_right",
+    "path": "sprites/S_Player_right/S_Player_right.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": {
-    "name": "S_Player_down",
-    "path": "sprites/S_Player_down/S_Player_down.yy",
+    "name": "S_Player_right",
+    "path": "sprites/S_Player_right/S_Player_right.yy",
   },
   "persistent": true,
   "parentObjectId": null,

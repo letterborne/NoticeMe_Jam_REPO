@@ -1,0 +1,1 @@
+global.font_main = font_add(F_Menu, 60, (false), (false), 32, 128);    

@@ -8,3 +8,5 @@ flash = 0;
 
 hitfrom = 0;
 
+enemyRunSprite = S_EnemyR;
+

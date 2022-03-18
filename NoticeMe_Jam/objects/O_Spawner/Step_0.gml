@@ -8,6 +8,7 @@ if(triggered)
 		{
 			var spawnpoint = next[_SPAWN];
 			instance_create_layer(spawn[spawnpoint, 0], spawn[spawnpoint, 1], "Enemy", next[_TYPE]);
+			//instance_create_layer(spawn_pos_x, spawn_pos_y, "Enemy", next[_TYPE]);
 		}
 	}
 	

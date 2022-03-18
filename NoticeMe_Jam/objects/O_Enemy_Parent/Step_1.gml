@@ -8,5 +8,11 @@ if(hp <= 0)
 		image_xscale = sign(hsp);
 	}
 	
+	with(O_Player)
+	{
+		highscore += 10;
+		show_debug_message(highscore);
+	}
+	
 	instance_destroy();
 }

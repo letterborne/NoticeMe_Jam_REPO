@@ -12,9 +12,19 @@ sprite[UP] = S_Player_up;
 sprite[LEFT] = S_Player_left;
 sprite[DOWN] = S_Player_down;
 
-face = DOWN;
+face = RIGHT;
 
 //Attack stuff
 
 hitByAttack = -1;
+
+
+//Health
+
+hp = 5;
+
+
+//Score
+
+highscore = 0;
 

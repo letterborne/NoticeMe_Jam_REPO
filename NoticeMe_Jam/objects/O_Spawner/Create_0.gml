@@ -6,3 +6,6 @@
 triggered = false;
 timer = 0;
 current_wave = 0;
+
+spawn_pos_x = 0;
+spawn_pos_y = 0;

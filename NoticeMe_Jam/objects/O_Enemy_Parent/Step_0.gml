@@ -44,12 +44,12 @@ else
 	image_speed = 1;
 	if(hsp == 0) 
 	{
-		sprite_index = S_EnemyR; //use an enemy idle here later
+		sprite_index = enemyRunSprite; //use an enemy idle here later
 		
 	}
 	else 
 	{
-		sprite_index = S_EnemyR;
+		sprite_index = enemyRunSprite;
 		
 	}
 }
